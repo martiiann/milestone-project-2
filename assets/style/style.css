@@ -1,0 +1,235 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/ms2bgg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Navbar */
+
+.navbar {
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick the navbar to the top */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.navbar {
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-bottom: 3px solid #ffcc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+.navbar-brand img {
+    width: 50px;
+}
+.navbar-nav .nav-link {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 16px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+/* Main Heading */
+.main-heading {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 3rem;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 6px rgba(255, 255, 0, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: pulse 2s infinite;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 140, 0, 0.9), 0 0 20px rgba(255, 140, 0, 0.7);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 140, 0, 1), 0 0 40px rgba(255, 140, 0, 0.9);
+    }
+}
+
+/* Subtext */
+.subtext {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Game Rules */
+.rules {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+}
+.rules-heading {
+    animation: pulse 2s infinite;
+    font-size: 1.8rem;
+    font-family: 'Fredoka One', sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffeb3b;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    padding: 10px;
+}
+.rules-list {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-family: 'Fredoka One', sans-serif;
+}
+.rules-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.rules-list li i {
+    color: #ffaa00;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+/* Start Game Form */
+#start-form {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    text-align: center;
+}
+
+/* Update for the "What's your name?" label with animation */
+#start-form label {
+    font-family: 'Fredoka One', sans-serif; /* Use 'Fredoka One' font for the label */
+    font-size: 1.5rem;
+    animation: pulse 2s infinite; /* Apply pulse animation */
+}
+
+/* Update for the "Enter your name" input */
+#start-form input {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Fredoka One', sans-serif; /* Keep 'Fredoka One' for the input field */
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Update for the "Enter your name" placeholder */
+#start-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Poppins', sans-serif; /* Use 'Poppins' font for the placeholder */
+    font-weight: bold;
+}
+
+/* Focus input field */
+#start-form input:focus {
+    outline: none;
+    border: 2px solid #ffaa00;
+    box-shadow: 0 0 10px #ffaa00;
+}
+
+/* Start Game button */
+#start-form button {
+    background-color: #ffcc00;
+    color: black;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: glow 1.5s infinite alternate;
+}
+
+#start-form button:hover {
+    background-color: #ffaa00;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffaa00;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ffcc00;
+    }
+    to {
+        box-shadow: 0 0 20px #ffcc00;
+    }
+}
+
+/* Pulse animation for the "What's your name?" label with consistent color */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 204, 0, 0.9), 0 0 20px rgba(255, 204, 0, 0.7); /* #ffcc00 */
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 204, 0, 1), 0 0 40px rgba(255, 204, 0, 0.9); /* #ffcc00 */
+    }
+}
+
+/* Footer */
+.footer {
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 3px solid #ffcc00;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    margin: 0; /* Ensure no extra margin on the footer */
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    width: 100%; /* Ensure footer spans the entire width */
+}

@@ -222,14 +222,17 @@ body {
 
 /* Footer */
 .footer {
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.9);
+    height: 80px; /* Set a fixed height for the footer */
+    width: 100%; /* Ensure it spans the full width of the screen */
+    padding: 20px 0; /* Adjust padding to match design */
+    background: rgba(0, 0, 0, 0.9); /* Solid black background */
     border-top: 3px solid #ffcc00;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
-    font-size: 0.9rem;
+    font-size: 1rem; /* Adjust font size to match navbar */
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
-    margin: 0; /* Ensure no extra margin on the footer */
-    flex-shrink: 0; /* Prevent footer from shrinking */
-    width: 100%; /* Ensure footer spans the entire width */
+    margin-top: 0;
+    position: relative;
+    left: 0; /* Ensure it starts from the left edge */
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }

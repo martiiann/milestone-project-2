@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartoon Cars Quiz Game</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
 <body>
@@ -13,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logocars.png" alt="Logo" width="40" height="40"> Cartoon Cars Quiz
+                <img src="assets/images/logocars.png" alt="Logo" width="40" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,13 +22,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html"><i class="bi bi-house-door"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="quiz.html">Quiz Game</a>
+                        <a class="nav-link active" href="quiz.html"><i class="bi bi-controller"></i> Quiz Game</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="contact.html"><i class="bi bi-envelope"></i> Contact</a>
                     </li>
                 </ul>
             </div>
@@ -36,13 +37,23 @@
 
     <!-- Quiz Game Content -->
     <div id="quiz-container" class="container mt-5 text-center">
-        <h1>Cartoon Cars Quiz</h1>
+        <h1 class="main-heading"><i class="bi bi-flag"></i> Cartoon Cars Quiz</h1>
+        <div id="scoreboard" class="subtext my-3">
+            <p>Score: <span id="score">0</span></p>
+        </div>
         <div id="question" class="quiz-question my-4"></div>
         <div id="options" class="quiz-options"></div>
+        <button id="next-button" class="btn start-btn btn-warning mt-5" onclick="nextQuestion()" disabled>Next Question</button>
+        <button id="restart-button" class="btn start-btn btn-danger mt-3" onclick="restartQuiz()" style="display: none;">Restart</button>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer text-center text-white mt-5">
+        <p>&copy; 2025 Cartoon Cars Quiz. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
     <script src="assets/js/game.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

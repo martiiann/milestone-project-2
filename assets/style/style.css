@@ -26,7 +26,6 @@ body {
 }
 
 /* Navbar */
-
 .navbar {
     position: sticky; /* Make the navbar sticky */
     top: 0; /* Stick the navbar to the top */
@@ -235,4 +234,36 @@ body {
     position: relative;
     left: 0; /* Ensure it starts from the left edge */
     box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+/* Quiz-Specific Styles */
+.quiz-question {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffcc00;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffcc00;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.option-btn:hover {
+    background-color: #ffaa00;
+}
+
+#scoreboard {
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+#next-button {
+    margin-top: 20px;
+    font-size: 1.2rem;
 }

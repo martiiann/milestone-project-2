@@ -1,4 +1,6 @@
-/* Global Styles */
+/* -----------------------------------------------------------
+   GLOBAL STYLES
+----------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +27,9 @@ body {
     color: white;
 }
 
-/* Navbar */
+/* -----------------------------------------------------------
+   NAVBAR
+----------------------------------------------------------- */
 .navbar {
     position: sticky; /* Make the navbar sticky */
     top: 0; /* Stick the navbar to the top */
@@ -36,12 +40,6 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
-.navbar {
-    padding: 10px 20px;
-    background: rgba(0, 0, 0, 0.9);
-    border-bottom: 3px solid #ffcc00;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-}
 .navbar-brand img {
     width: 50px;
 }
@@ -57,32 +55,53 @@ body {
     color: white;
 }
 
-/* Main Heading */
+/* -----------------------------------------------------------
+   MAIN HEADING (Quiz Title)
+   => Now has both pulsing text AND outer glow.
+----------------------------------------------------------- */
 .main-heading {
     font-family: 'Fredoka One', sans-serif;
     font-size: 3rem;
     color: #ffeb3b;
-    text-shadow: 2px 2px 6px rgba(255, 255, 0, 0.8);
     text-transform: uppercase;
     letter-spacing: 2px;
-    animation: pulse 2s infinite;
     margin-bottom: 20px;
     background: rgba(0, 0, 0, 0.9);
     padding: 15px;
     border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+
+    /*
+       Originally, you had "animation: pulse 2s infinite;"
+       for the text shadow effect. We keep that here:
+    */
+    animation: pulse 2s infinite;
+
+    /* 
+       Changed from a semi-transparent white border
+       to a bright #ffaa00 border + glow box-shadow 
+    */
+    border: 2px solid #ffaa00;
+    box-shadow: 0 0 15px #ffaa00;
 }
 
+/* Your original pulse keyframes for text glow */
 @keyframes pulse {
     0%, 100% {
-        text-shadow: 0 0 10px rgba(255, 140, 0, 0.9), 0 0 20px rgba(255, 140, 0, 0.7);
+        text-shadow: 0 0 10px rgba(255, 140, 0, 0.9),
+                     0 0 20px rgba(255, 140, 0, 0.7);
     }
     50% {
-        text-shadow: 0 0 30px rgba(255, 140, 0, 1), 0 0 40px rgba(255, 140, 0, 0.9);
+        text-shadow: 0 0 30px rgba(255, 140, 0, 1),
+                     0 0 40px rgba(255, 140, 0, 0.9);
     }
 }
 
-/* Subtext */
+/* (If you want a separate "heading-glow" animation, you could add it,
+   but we’re using your original "pulse" for the text. */
+
+/* -----------------------------------------------------------
+   SUBTEXT
+----------------------------------------------------------- */
 .subtext {
     font-family: 'Fredoka One', sans-serif;
     font-size: 1.2rem;
@@ -94,7 +113,9 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Game Rules */
+/* -----------------------------------------------------------
+   GAME RULES (you had a .rules section, etc.)
+----------------------------------------------------------- */
 .rules {
     margin-top: 20px;
     padding: 20px;
@@ -136,7 +157,9 @@ body {
     font-size: 1.2rem;
 }
 
-/* Start Game Form */
+/* -----------------------------------------------------------
+   START GAME FORM (if you had it in your code)
+----------------------------------------------------------- */
 #start-form {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
@@ -148,18 +171,16 @@ body {
     text-align: center;
 }
 
-/* Update for the "What's your name?" label with animation */
 #start-form label {
-    font-family: 'Fredoka One', sans-serif; /* Use 'Fredoka One' font for the label */
+    font-family: 'Fredoka One', sans-serif;
     font-size: 1.5rem;
-    animation: pulse 2s infinite; /* Apply pulse animation */
+    animation: pulse 2s infinite;
 }
 
-/* Update for the "Enter your name" input */
 #start-form input {
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    font-family: 'Fredoka One', sans-serif; /* Keep 'Fredoka One' for the input field */
+    font-family: 'Fredoka One', sans-serif;
     font-size: 1.5rem;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -167,21 +188,18 @@ body {
     margin-bottom: 10px;
 }
 
-/* Update for the "Enter your name" placeholder */
 #start-form input::placeholder {
     color: rgba(255, 255, 255, 0.7);
-    font-family: 'Poppins', sans-serif; /* Use 'Poppins' font for the placeholder */
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
 
-/* Focus input field */
 #start-form input:focus {
     outline: none;
     border: 2px solid #ffaa00;
     box-shadow: 0 0 10px #ffaa00;
 }
 
-/* Start Game button */
 #start-form button {
     background-color: #ffcc00;
     color: black;
@@ -200,6 +218,7 @@ body {
     box-shadow: 0 0 20px #ffaa00;
 }
 
+/* Keyframes for the "glow" used by these buttons */
 @keyframes glow {
     from {
         box-shadow: 0 0 10px #ffcc00;
@@ -209,38 +228,44 @@ body {
     }
 }
 
-/* Pulse animation for the "What's your name?" label with consistent color */
-@keyframes pulse {
-    0%, 100% {
-        text-shadow: 0 0 10px rgba(255, 204, 0, 0.9), 0 0 20px rgba(255, 204, 0, 0.7); /* #ffcc00 */
-    }
-    50% {
-        text-shadow: 0 0 30px rgba(255, 204, 0, 1), 0 0 40px rgba(255, 204, 0, 0.9); /* #ffcc00 */
-    }
-}
-
-/* Footer */
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
 .footer {
-    height: 80px; /* Set a fixed height for the footer */
-    width: 100%; /* Ensure it spans the full width of the screen */
-    padding: 20px 0; /* Adjust padding to match design */
-    background: rgba(0, 0, 0, 0.9); /* Solid black background */
+    height: 80px;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.9);
     border-top: 3px solid #ffcc00;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7);
-    font-size: 1rem; /* Adjust font size to match navbar */
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     text-align: center;
     margin-top: 0;
     position: relative;
-    left: 0; /* Ensure it starts from the left edge */
-    box-sizing: border-box; /* Include padding and border in width calculation */
+    left: 0;
+    box-sizing: border-box;
 }
 
-/* Quiz-Specific Styles */
+/* -----------------------------------------------------------
+   QUIZ-SPECIFIC STYLES
+----------------------------------------------------------- */
 .quiz-question {
     font-family: 'Fredoka One', sans-serif;
     font-size: 2rem;
     margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffaa00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .option-btn {
@@ -252,18 +277,121 @@ body {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .option-btn:hover {
     background-color: #ffaa00;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.8);
 }
 
 #scoreboard {
     font-size: 1.2rem;
     color: #ffcc00;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffaa00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+    margin-bottom: 20px;
 }
 
+#timer {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    text-align: center;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffaa00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Next & Restart buttons => same glowing animation as Start */
 #next-button {
-    margin-top: 20px;
+    background-color: #ffaa00;
+    color: black;
+    font-family: 'Fredoka One', sans-serif;
     font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: glow 1.5s infinite alternate;
+}
+
+#next-button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+}
+
+#restart-button {
+    background-color: #ffaa00;
+    color: black;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    animation: glow 1.5s infinite alternate;
+}
+
+#restart-button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.8);
+}
+
+/* Fun Fact Styling */
+.fun-fact {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffaa00;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+}
+
+/* Final Score Section */
+.final-score {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.5rem;
+    color: #ffcc00;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 2px solid #ffaa00;
+    text-align: center;
+    box-shadow: 0 0 15px #ffaa00;
+    /* If you want the final score to pulse like the heading,
+       you can add: animation: pulse 2s infinite; */
+}
+
+/* Final Score Text */
+.final-score-text {
+    font-size: 1.3rem;
+    color: #ffcc00;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffaa00;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
 }

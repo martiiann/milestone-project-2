@@ -86,9 +86,19 @@ function restartQuiz() {
       <p>Score: <span id="score">0</span></p>
     </div>
 
+    <!-- I personally wrote this code: Race-themed Progress Bar Container -->
+    <div id="progress-bar-container">
+      <div id="race-track"></div>
+      <div id="race-car"></div>
+    </div>
+
+    <!-- I personally wrote this code: Timer Container (speedometer style) -->
+    <div id="timer-container">
+      <span id="timer">Time Left: 10s</span>
+    </div>
+
     <div id="question" class="quiz-question my-4"></div>
     <div id="options" class="quiz-options"></div>
-    <p id="timer" class="text-warning mt-3"></p>
 
     <button
       id="next-button"
@@ -140,8 +150,33 @@ function displayQuestion() {
   `;
 
   document.getElementById('question').innerHTML = questionHTML;
+
+  // I personally wrote this code: subtle fade-in effect for each new question
+  const questionDiv = document.getElementById('question');
+  questionDiv.classList.remove('fade-in');
+  // Force reflow to restart animation
+  void questionDiv.offsetWidth;
+  questionDiv.classList.add('fade-in');
+
+  // Reset/Start the timer
   document.getElementById('timer').textContent = "Time Left: 10s";
   startTimer();
+
+  // I personally wrote this code: update the progress bar (race car position)
+  updateProgressBar();
+}
+
+// ---------------------------------------------------------
+// I personally wrote this code:
+// Race-themed progress bar updater
+// ---------------------------------------------------------
+function updateProgressBar() {
+  const totalQuestions = questions.length;
+  const progressPercentage = (currentQuestionIndex / totalQuestions) * 100;
+  const raceCar = document.getElementById('race-car');
+  if (raceCar) {
+    raceCar.style.left = progressPercentage + '%';
+  }
 }
 
 // ---------------------------------------------------------
@@ -169,6 +204,18 @@ function checkAnswer(selectedAnswer) {
   funFactElement.textContent = question.funFact;
   funFactElement.classList.add('fun-fact');
   document.getElementById('question').appendChild(funFactElement);
+
+  // I personally wrote this code: Quick feedback after each question
+  let feedbackMsg = "";
+  if (selectedAnswer === correctAnswer) {
+    feedbackMsg = "Great job!";
+  } else {
+    feedbackMsg = "Better luck next time!";
+  }
+  const feedbackElement = document.createElement('p');
+  feedbackElement.textContent = feedbackMsg;
+  feedbackElement.classList.add('feedback-message');
+  document.getElementById('question').appendChild(feedbackElement);
 
   // Update score if correct
   if (selectedAnswer === correctAnswer) {
@@ -259,3 +306,4 @@ function displayResults() {
     </button>
   `;
 }
+

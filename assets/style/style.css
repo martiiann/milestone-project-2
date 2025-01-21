@@ -69,22 +69,11 @@ body {
     background: rgba(0, 0, 0, 0.9);
     padding: 15px;
     border-radius: 10px;
-
-    /*
-       Originally, you had "animation: pulse 2s infinite;"
-       for the text shadow effect. We keep that here:
-    */
     animation: pulse 2s infinite;
-
-    /* 
-       Changed from a semi-transparent white border
-       to a bright #ffaa00 border + glow box-shadow 
-    */
     border: 2px solid #ffaa00;
     box-shadow: 0 0 15px #ffaa00;
 }
 
-/* Your original pulse keyframes for text glow */
 @keyframes pulse {
     0%, 100% {
         text-shadow: 0 0 10px rgba(255, 140, 0, 0.9),
@@ -95,9 +84,6 @@ body {
                      0 0 40px rgba(255, 140, 0, 0.9);
     }
 }
-
-/* (If you want a separate "heading-glow" animation, you could add it,
-   but we’re using your original "pulse" for the text. */
 
 /* -----------------------------------------------------------
    SUBTEXT
@@ -114,7 +100,7 @@ body {
 }
 
 /* -----------------------------------------------------------
-   GAME RULES (you had a .rules section, etc.)
+   GAME RULES 
 ----------------------------------------------------------- */
 .rules {
     margin-top: 20px;
@@ -158,7 +144,7 @@ body {
 }
 
 /* -----------------------------------------------------------
-   START GAME FORM (if you had it in your code)
+   START GAME FORM 
 ----------------------------------------------------------- */
 #start-form {
     background-color: rgba(0, 0, 0, 0.9);
@@ -379,11 +365,8 @@ body {
     border: 2px solid #ffaa00;
     text-align: center;
     box-shadow: 0 0 15px #ffaa00;
-    /* If you want the final score to pulse like the heading,
-       you can add: animation: pulse 2s infinite; */
 }
 
-/* Final Score Text */
 .final-score-text {
     font-size: 1.3rem;
     color: #ffcc00;
@@ -394,4 +377,111 @@ body {
     text-align: center;
     margin-bottom: 20px;
     box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+
+/* -----------------------------------------------------------
+  
+   RACE-THEMED PROGRESS BAR
+----------------------------------------------------------- */
+#progress-bar-container {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+    height: 30px;
+    border-radius: 15px;
+    overflow: visible;
+    border: 2px solid #ffffff;
+    background: #333;
+}
+
+#race-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 25px;
+    /* A repeating checkered pattern */
+    background: repeating-linear-gradient(
+        to right,
+        #666 0,
+        #666 10px,
+        #333 10px,
+        #333 20px
+    );
+}
+
+#race-car {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 70px;  
+    height: 55px; 
+    background: url('../images/smallcaricon.png') no-repeat center/cover;
+    transition: left 0.5s ease;
+}
+
+/* -----------------------------------------------------------
+   TIMER DESIGN UPGRADE (Speedometer-like Circle)
+----------------------------------------------------------- */
+#timer-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px auto;
+    border: 4px solid #ffcc00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
+}
+#timer-container::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    border: 2px dashed #ffcc00;
+    border-radius: 50%;
+}
+
+#timer {
+    background: none; /* Let the circle show behind it */
+    border: none;
+    box-shadow: none;
+    margin-top: 0; 
+    font-size: 1.3rem;
+    color: #ffcc00;
+    text-shadow: 0 0 3px #ffaa00;
+}
+
+/* -----------------------------------------------------------
+  
+   QUICK FEEDBACK MESSAGES
+----------------------------------------------------------- */
+.feedback-message {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+    animation: fade-in 0.5s forwards;
+}
+
+/* -----------------------------------------------------------
+   SUBTLE TRANSITION EFFECTS (Fade-in Animation)
+----------------------------------------------------------- */
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+    to {
+        opacity: 1;
+    }
 }

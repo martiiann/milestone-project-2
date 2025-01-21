@@ -5,6 +5,10 @@ let timerInterval;
 // 1. Get the user's name from localStorage (or default to "Player").
 const storedName = localStorage.getItem('username') || 'Player';
 
+// Sounds
+const correctSound = new Audio('assets/sounds/correct-6033.mp3');
+const wrongSound = new Audio('assets/sounds/wronganswer-37702.mp3');
+
 const questions = [
   {
     question: "Who is Lightning McQueen's best friend?",
@@ -167,7 +171,6 @@ function displayQuestion() {
 }
 
 // ---------------------------------------------------------
-//
 // Race-themed progress bar updater
 // ---------------------------------------------------------
 function updateProgressBar() {
@@ -199,6 +202,13 @@ function checkAnswer(selectedAnswer) {
     btn.disabled = true;
   });
 
+  // Play correct or wrong sound
+  if (selectedAnswer === correctAnswer) {
+    correctSound.play();
+  } else {
+    wrongSound.play();
+  }
+
   // Display fun fact (white)
   const funFactElement = document.createElement('p');
   funFactElement.textContent = question.funFact;
@@ -209,24 +219,19 @@ function checkAnswer(selectedAnswer) {
   let feedbackMsg = "";
   if (selectedAnswer === correctAnswer) {
     feedbackMsg = "Great job!";
-  } else {
-    feedbackMsg = "Better luck next time!";
-  }
-  const feedbackElement = document.createElement('p');
-  feedbackElement.textContent = feedbackMsg;
-  feedbackElement.classList.add('feedback-message');
-  document.getElementById('question').appendChild(feedbackElement);
-
-  // Update score if correct
-  if (selectedAnswer === correctAnswer) {
     score++;
     document.getElementById('score').textContent = score;
     // Auto-advance after 3 seconds if correct
     setTimeout(nextQuestion, 3000);
   } else {
+    feedbackMsg = "Better luck next time!";
     // If incorrect, user must click Next
     document.getElementById('next-button').disabled = false;
   }
+  const feedbackElement = document.createElement('p');
+  feedbackElement.textContent = feedbackMsg;
+  feedbackElement.classList.add('feedback-message');
+  document.getElementById('question').appendChild(feedbackElement);
 }
 
 // ---------------------------------------------------------
@@ -246,6 +251,9 @@ function startTimer() {
       const question = questions[currentQuestionIndex];
       const correctAnswer = question.correctAnswer;
 
+      // Play wrongSound when time runs out
+      wrongSound.play();
+
       document.querySelectorAll('.option-btn').forEach((btn) => {
         if (btn.textContent === correctAnswer) {
           btn.style.backgroundColor = 'green';
@@ -255,7 +263,7 @@ function startTimer() {
         btn.disabled = true;
       });
 
-      // Enable Next
+      // Enable Next button
       document.getElementById('next-button').disabled = false;
     }
   }, 1000);
@@ -306,4 +314,3 @@ function displayResults() {
     </button>
   `;
 }
-

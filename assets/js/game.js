@@ -151,7 +151,7 @@ function displayQuestion() {
 
   document.getElementById('question').innerHTML = questionHTML;
 
-  // I personally wrote this code: subtle fade-in effect for each new question
+  // subtle fade-in effect for each new question
   const questionDiv = document.getElementById('question');
   questionDiv.classList.remove('fade-in');
   // Force reflow to restart animation
@@ -162,12 +162,12 @@ function displayQuestion() {
   document.getElementById('timer').textContent = "Time Left: 10s";
   startTimer();
 
-  // I personally wrote this code: update the progress bar (race car position)
+  // update the progress bar (race car position)
   updateProgressBar();
 }
 
 // ---------------------------------------------------------
-// I personally wrote this code:
+//
 // Race-themed progress bar updater
 // ---------------------------------------------------------
 function updateProgressBar() {
@@ -205,7 +205,7 @@ function checkAnswer(selectedAnswer) {
   funFactElement.classList.add('fun-fact');
   document.getElementById('question').appendChild(funFactElement);
 
-  // I personally wrote this code: Quick feedback after each question
+  //  Quick feedback after each question
   let feedbackMsg = "";
   if (selectedAnswer === correctAnswer) {
     feedbackMsg = "Great job!";

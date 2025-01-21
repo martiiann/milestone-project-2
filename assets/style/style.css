@@ -485,3 +485,133 @@ body {
         opacity: 1;
     }
 }
+
+
+
+/* Contact Form Section */
+form {
+    background-color: rgba(0, 0, 0, 0.9) !important; /* Override Bootstrap defaults */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    border: 3px solid #ffaa00 !important; /* Align border with theme */
+    text-align: center;
+}
+
+form label {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.8rem;
+    animation: pulse 2s infinite;
+    color: #ffaa00 !important; /* Ensure theme color is used */
+    text-shadow: 0 0 5px rgba(255, 170, 0, 0.8);
+}
+
+form input,
+form textarea {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Subtle background change */
+    color: white !important;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.3rem;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important; /* Consistent border size */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Consistent spacing between fields */
+    width: 100%;
+    transition: border 0.3s, box-shadow 0.3s; /* Smooth interaction feedback */
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 2px solid #ffaa00 !important; /* Matches focus styles on Home page */
+    box-shadow: 0 0 15px #ffaa00; /* Glow on focus */
+}
+
+/* Button Styles */
+form button {
+    background-color: #ffaa00 !important; /* Match your theme */
+    color: black !important;
+    font-family: 'Fredoka One', sans-serif !important; /* Enforce the correct font */
+    font-size: 1.5rem !important; /* Adjust font size for emphasis */
+    border: 2px solid #ffaa00 !important; /* Ensure consistent border */
+    padding: 12px 25px; /* Adjust padding for better size */
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: glow 1.5s infinite alternate; /* Add glowing animation */
+    cursor: pointer;
+}
+
+/* Button Hover */
+form button:hover {
+    background-color: #ffcc00 !important; /* Slightly lighter hover color */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffaa00;
+}
+
+/* Button Focus */
+form button:focus {
+    outline: none !important; /* Remove the default focus outline */
+    border: 2px solid #ffaa00 !important; /* Keep the border consistent */
+    box-shadow: 0 0 15px #ffaa00; /* Add glow effect on focus */
+}
+
+/* Button Active */
+form button:active {
+    background-color: #ffcc00 !important; /* Match hover color */
+    border-color: #ffaa00 !important;
+    transform: scale(1); /* Reset scale on click */
+    box-shadow: 0 0 10px #ffaa00;
+}
+
+/* Remove Bootstrap's Default Focus Styles */
+button:focus,
+input:focus {
+    outline: none !important; /* Completely remove blue outline */
+    box-shadow: none !important; /* Remove any remaining shadow */
+}
+
+form h1 {
+    font-family: 'Fredoka One', sans-serif !important; /* Ensure the correct font */
+    font-size: 3rem !important; /* Adjust to match the home page */
+    color: #ffeb3b !important; /* Bright yellow text */
+    text-transform: uppercase; /* Make text uppercase */
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.9); /* Black translucent background */
+    padding: 15px;
+    border-radius: 10px; /* Rounded edges */
+    border: 3px solid #ffaa00; /* Yellow border */
+    text-align: center; /* Center-align the text */
+    box-shadow: 0 0 15px #ffaa00; /* Glowing effect */
+    animation: pulse 2s infinite; /* Add the glowing pulsing animation */
+}
+
+/* Animation for Glowing Effects */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #ffaa00;
+    }
+    100% {
+        box-shadow: 0 0 20px #ffaa00;
+    }
+}
+
+/* Animation for Pulsing Effects */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 140, 0, 0.9),
+                     0 0 20px rgba(255, 140, 0, 0.7);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 140, 0, 1),
+                     0 0 40px rgba(255, 140, 0, 0.9);
+    }
+}

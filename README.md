@@ -63,7 +63,6 @@ Vibrant and playful colors were chosen to resonate with the theme of cartoons an
 ### Typography
 Fonts were selected to enhance readability while maintaining a fun and engaging style.
 
-
 ---
 
 ## Technologies Used
@@ -73,16 +72,13 @@ Fonts were selected to enhance readability while maintaining a fun and engaging 
 - **CSS3**
 - **JavaScript**
 
-
 ## Wireframes
 
 Here are the wireframes for the website:
 
-![Home and Quiz Page on laptop](README Images/pwf.png)
-![Home and Quiz Page on Tablet](README Images/tabletwf.png)
-![Home and Quiz Page on mobile](README Images/wpwf.png)
-
-
+![Home and Quiz Page on laptop](README%20Images/pwf.png)
+![Home and Quiz Page on Tablet](README%20Images/tabletwf.png)
+![Home and Quiz Page on mobile](README%20Images/wpwf.png)
 
 ### Frameworks, Libraries, and Tools
 - **Jest**: Used for unit testing JavaScript functionality.
@@ -118,7 +114,7 @@ Here are the wireframes for the website:
 ---
 
 ## Lighthouse Performance and Accessibility Scores
-![Lighthouse Performance Report](README Images/pagespeedtest.png)
+![Lighthouse Performance Report](README%20Images/pagespeedtest.png)
 - **Performance**: 98%
 - **Accessibility**: 100%
 - **Best Practices**: 100%
@@ -133,11 +129,11 @@ Here are the wireframes for the website:
 - **JavaScript Testing**: Validated with JSHint, ensuring no critical errors.
 
 ### Sample Validation Screenshots
-![HTML Home Page Validation Screenshot](README Images/homehtmltest.png)
-![HTML Quiz Page Validation Screenshot](README Images/quizhtmltest.png)
-![CSS Validation Screenshot](README Images/csstest.png)
-![JS Validation Screenshot](README Images/jstest.png)
-![JS Validation Screenshot](README Images/jstest2.png)
+![HTML Home Page Validation Screenshot](README%20Images/homehtmltest.png)
+![HTML Quiz Page Validation Screenshot](README%20Images/quizhtmltest.png)
+![CSS Validation Screenshot](README%20Images/csstest.png)
+![JS Validation Screenshot](README%20Images/jstest.png)
+![JS Validation Screenshot](README%20Images/jstest2.png)
 
 ---
 
@@ -171,3 +167,4 @@ The live link for the website is available [here](https://martiiann.github.io/mi
 - Special thanks to my mentors **Marko** and **Moritz** for their invaluable guidance throughout my project.
 - I would like to thank the tutor support team at **Code Institute** for their assistance.
 - A big thank you to the entire **Code Institute** for providing me with the opportunity to attend this course and work on this project.
+

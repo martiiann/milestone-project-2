@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1737562659695" clover="3.2.0">
+  <project timestamp="1737562659695" name="All files">
+    <metrics statements="15" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6" elements="27" coveredelements="25" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
+    <file name="quizLogic.js" path="/workspace/milestone-project-2/src/quizLogic.js">
+      <metrics statements="15" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="8" count="9" type="stmt"/>
+      <line num="9" count="9" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="26" count="3" type="stmt"/>
+      <line num="36" count="9" type="cond" truecount="4" falsecount="0"/>
+      <line num="37" count="3" type="stmt"/>
+      <line num="39" count="6" type="cond" truecount="1" falsecount="1"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="42" count="6" type="stmt"/>
+      <line num="43" count="6" type="stmt"/>
+      <line num="51" count="5" type="stmt"/>
+      <line num="59" count="6" type="stmt"/>
+      <line num="62" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>

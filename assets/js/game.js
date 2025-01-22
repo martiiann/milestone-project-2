@@ -191,13 +191,13 @@ function checkAnswer(selectedAnswer) {
   const question = questions[currentQuestionIndex];
   const correctAnswer = question.correctAnswer;
 
-  // Highlight correct/incorrect answers
+  // Highlight correct/incorrect answers using CSS classes
   const optionButtons = document.querySelectorAll('.option-btn');
   optionButtons.forEach((btn) => {
     if (btn.textContent === correctAnswer) {
-      btn.style.backgroundColor = 'green';
+      btn.classList.add('correct');
     } else if (btn.textContent === selectedAnswer) {
-      btn.style.backgroundColor = 'red';
+      btn.classList.add('wrong');
     }
     btn.disabled = true;
   });
@@ -215,7 +215,7 @@ function checkAnswer(selectedAnswer) {
   funFactElement.classList.add('fun-fact');
   document.getElementById('question').appendChild(funFactElement);
 
-  //  Quick feedback after each question
+  // Quick feedback after each question
   let feedbackMsg = "";
   if (selectedAnswer === correctAnswer) {
     feedbackMsg = "Great job!";
@@ -256,9 +256,9 @@ function startTimer() {
 
       document.querySelectorAll('.option-btn').forEach((btn) => {
         if (btn.textContent === correctAnswer) {
-          btn.style.backgroundColor = 'green';
+          btn.classList.add('correct');
         } else {
-          btn.style.backgroundColor = 'red';
+          btn.classList.add('wrong');
         }
         btn.disabled = true;
       });

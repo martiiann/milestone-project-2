@@ -95,24 +95,54 @@ Here are the wireframes for the website:
 
 ## Testing
 
-### Internal and External Link Testing
-| Link                | Action                     | Result          |
-|---------------------|----------------------------|-----------------|
-| Start Quiz Button   | Starts the quiz            | Works as expected |
-| Navbar Logo         | Navigates to homepage      | Works as expected |
-
 ### Quiz Functionality Testing
 - **Question Buttons**:
-  - When the user clicks the correct answer, they hear the correct sound and automatically proceed to the next question. **Works as expected.**
-  - When the user clicks the wrong answer, they hear the wrong sound, and the "Next Question" button appears for manual progression. **Works as expected.**
-  - Regardless of whether the answer is correct or incorrect, the user always sees a **fun fact** about the question after answering. **Works as expected.**
+  - **Single-Selection**: Users can only select one of the three available answers per question. Clicking another answer does not allow multiple selections. **Works as expected.**
+  - **Correct Answer**: 
+    - Plays a positive sound.
+    - Button changes color to green.
+    - Automatically proceeds to the next question after a brief delay. **Works as expected.**
+  - **Incorrect Answer**:
+    - Plays a negative sound.
+    - Button changes color to red.
+    - Displays a "Next Question" button for manual progression. **Works as expected.**
+  - **Fun Fact**: After every question, a fun fact related to the answer is displayed, regardless of whether the user’s choice was correct or incorrect. **Works as expected.**
+
+- **Timer Functionality**:
+  - The timer counts down correctly for each question.
+  - If the timer runs out:
+    - The question is marked as incorrect.
+    - A negative sound plays.
+    - The score is not incremented.
+    - The "Next Question" button appears. **Works as expected.**
 
 - **Audio Feedback**:
-  - Correct sound plays when the user selects the correct answer.
-  - Incorrect sound plays when the user selects the wrong answer. **Both work as expected.**
+  - Correct answers play a distinct, positive sound.
+  - Incorrect answers play a distinct, negative sound.
+  - No overlapping sounds occur, even if users click multiple answers rapidly. **Works as expected.**
 
-- **Logo Functionality**:
-  - Clicking on the logo in the navbar correctly navigates the user to the homepage. **Works as expected.**
+- **Score Calculation**:
+  - Correct answers increment the score by 1.
+  - Incorrect answers, including those due to the timer running out, do not increment the score. **Works as expected.**
+
+#### End-of-Quiz Behavior
+- At the end of the quiz:
+  - Displays the final score out of 10.
+  - Shows a personalized message based on the score:
+    - **Below 5**: An encouraging and funny message.
+    - **Less than 8**: A motivational message to improve.
+    - **Less than 10**: A positive message with suggestions for perfection.
+    - **Perfect Score (10/10)**: A congratulatory message. **Works as expected.**
+  - Users can restart the quiz, and all progress, including the score and timer, is reset. **Works as expected.**
+
+#### Edge Case Testing
+- Selecting answers rapidly does not cause overlapping sounds or visual glitches. **Works as expected.**
+- Switching browser tabs during a question:
+  - The visual timer might pause (depending on browser behavior), but the actual timer logic continues running in the background. **Works as expected.**
+
+#### Compatibility Testing
+- The quiz has been tested across major browsers (e.g., Chrome, Firefox, Edge, Safari) and works as expected.
+- The quiz functions as intended on both desktop and mobile devices, ensuring full responsiveness.
 
 ---
 
@@ -170,4 +200,3 @@ The live link for the website is available [here](https://martiiann.github.io/mi
 - Special thanks to my mentors **Marko** and **Moritz** for their invaluable guidance throughout my project.
 - I would like to thank the tutor support team at **Code Institute** for their assistance.
 - A big thank you to the entire **Code Institute** for providing me with the opportunity to attend this course and work on this project.
-

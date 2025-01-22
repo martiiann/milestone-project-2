@@ -3,7 +3,7 @@
 The **Cartoon Cars Quiz** is a fully responsive and interactive website that entertains users with a fun and engaging quiz about cars from various cartoons. Built with HTML, CSS, and JavaScript, the site delivers a seamless and dynamic user experience. It tests users' knowledge by presenting a series of questions about iconic cartoon cars, incorporating audio feedback and responsive design to enhance engagement and usability.
 
 ![All screens website](README%20Images/responsivenesstest1.png)
-![All screens website](README%20Images/responsivenesstest2.png)
+![All screens website](README%20Images/responsivenesstes2.png)
 
 ---
 

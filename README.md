@@ -47,15 +47,24 @@ The website is fully responsive, ensuring compatibility with devices of all size
 
 ### User Stories
 
-#### First-time Visitor Goals
-1. I want to understand the purpose of the site and easily navigate it.
-2. I want clear instructions on how to play the quiz.
-3. I want feedback on my performance to see how well I did.
+### First-Time Visitor Goals
+1. **I want to understand the purpose of the site and easily navigate it.**
+2. **I want clear instructions on how to play the quiz.**
+   - The homepage clearly displays the purpose of the site along with quiz rules, allowing users to understand how to play before starting.
+   - Users can enter their name on the homepage, which will carry over to the quiz page.
+   - Screenshot:
+     ![Homepage Screenshot](README%20Images/hpagescreen.png)
+3. **I want feedback on my performance to see how well I did.**
+   - The quiz page displays the user’s score, showing the number of questions they’ve answered correctly.
+   - At the end of the quiz, users receive a final score along with a personalized message based on their performance.
+   - Screenshot:
+     ![Quiz Page Screenshot](README%20Images/qpagescreen.png)
+     ![Quiz Page Screenshot](README%20Images/resultpscreen.png)
 
 #### Returning Visitor Goals
 1. I want to improve my score and track my progress.
 2. I want a smooth and fast experience while playing the quiz.
-
+  
 ---
 
 ## Design

@@ -61,10 +61,30 @@ The website is fully responsive, ensuring compatibility with devices of all size
 ## Design
 
 ### Colour Scheme
-Vibrant and playful colors were chosen to resonate with the theme of cartoons and cars.
+The primary colors used in the **Cartoon Cars Quiz** include:
+- **Yellow** (`#ffcc00`): Used as the primary accent color for buttons and interactive elements. It reflects the playful and energetic theme of cartoons and cars. Below is a visual representation of the yellow color:
+
+  ![Color Scheme Screenshot](README%20Images/images.png)
+
+- **Black** (semi-transparent): Used as the background color for sections to provide a sleek, modern look while maintaining readability and focus on content.
+- **Grey**: Used for the navbar background to create a neutral and subtle separation between the navigation elements and the main content.
 
 ### Typography
-Fonts were selected to enhance readability while maintaining a fun and engaging style.
+The font used for the project is **Fredoka One**, which provides a fun and bold appearance that aligns with the cartoon theme. This font was imported via Google Fonts and applied consistently throughout the site.
+
+#### Font Example
+The screenshot below showcases the use of the **Fredoka One** font:
+
+![Font Screenshot](README%20Images/fredoka-02.jpg)
+
+---
+
+### Design Decisions
+These design choices were made to ensure:
+1. **Readability**: The semi-transparent black background and grey navbar provide excellent contrast for text and interactive elements.
+2. **Playful Theme**: The bold **Fredoka One** font and the vibrant yellow accent color (`#ffcc00`) enhance the cartoonish and fun atmosphere.
+3. **Consistency**: The color scheme and typography are applied consistently throughout all pages, contributing to a cohesive user experience.
+
 
 ---
 
@@ -84,12 +104,14 @@ Here are the wireframes for the website:
 ![Home and Quiz Page on mobile](README%20Images/wpwf.png)
 
 ### Frameworks, Libraries, and Tools
+- **Bootstrap**: Used for responsive design and pre-built components to enhance the layout and styling of the website.
 - **Jest**: Used for unit testing JavaScript functionality.
 - **JSHint**: Used to validate JavaScript code for errors.
 - **Google Fonts**: Used to import stylish fonts for the quiz.
 - **Git**: Version control system for managing changes.
 - **GitHub Pages**: Used to host the live website.
 - **Browser Developer Tools**: Used to debug and test responsiveness and performance.
+
 
 ---
 
@@ -143,6 +165,35 @@ Here are the wireframes for the website:
 #### Compatibility Testing
 - The quiz has been tested across major browsers (e.g., Chrome, Firefox, Edge, Safari) and works as expected.
 - The quiz functions as intended on both desktop and mobile devices, ensuring full responsiveness.
+
+## Responsiveness Testing
+
+The **Cartoon Cars Quiz** has been tested for responsiveness across a variety of devices to ensure a seamless user experience on mobile, tablet, and desktop. The site dynamically adjusts its layout and design elements to provide an optimal experience for users, regardless of screen size.
+
+### Devices Tested
+The following devices were used to test responsiveness:
+- **Mobile**: iPhone 16, iPhone 15, Samsung Galaxy S23 Ultra
+- **Tablet**: iPad Air, Xiaomi Redmi Tab Pro
+- **Desktop**: MacBook Pro, Windows PC (1920x1080 resolution)
+
+### Results
+- **Mobile**: All elements were displayed correctly, and the layout was adjusted to fit the smaller screen. Navigation, buttons, and quiz functionality were fully operational. **Works as expected.**
+- **Tablet**: The site scaled perfectly for medium-sized screens, maintaining visual hierarchy and ease of navigation. **Works as expected.**
+- **Desktop**: The full layout was displayed as intended, with no visual or functional issues. **Works as expected.**
+
+### Screenshots
+Below are screenshots showcasing the site's responsiveness:
+
+#### Mobile View
+![Mobile View Screenshot](README%20Images/mobilertest.png)
+
+#### Tablet View
+![Tablet View Screenshot](README%20Images/tabletrtest.png)
+
+#### Desktop View
+![Desktop View Screenshot](README%20Images/desktoprtest.png)
+
+
 
 ---
 
